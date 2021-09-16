@@ -67,22 +67,25 @@ export default function Difference({ men, women, resetGender }) {
   };
   return (
     <Grid container spacing={1}>
-      <Grid item xs={12} sm={4}>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <h4>
-          <center>
+      <Grid xs={12}>
+        <center>
+          <h4>
             <Times />
             <br />
             and <Count />
-            <br />
-            <br />
+          </h4>
+        </center>
+      </Grid>
+      <Grid item xs={12} sm={4}></Grid>
+      <Grid item xs={12} sm={4}>
+        <h4>
+          <center>
             <Chart women={women} men={men} />
           </center>
         </h4>
       </Grid>
       <Grid item xs={12} sm={4}>
-      <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo" />
       </Grid>
     </Grid>
   );

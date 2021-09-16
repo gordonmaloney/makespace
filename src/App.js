@@ -21,7 +21,7 @@ function App() {
 
         <Grid container spacing={1}   justifyContent="space-around"
 >
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={5}>
             <Timer
               gender="Women"
               difference={(minutes, seconds, count) =>
@@ -30,7 +30,7 @@ function App() {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={5}>
             <Timer
               gender="Men"
               difference={(minutes, seconds, count) =>

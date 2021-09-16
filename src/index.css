@@ -73,7 +73,7 @@ code {
   min-width: 180px;
   float: right;
   position: relative;
-  bottom: -60%
+  bottom: -45%
 }
 
 @media screen and (max-width: 600px) {
@@ -82,4 +82,29 @@ code {
     padding-bottom: 10px;
     position: static;
   }
+}
+
+
+
+@media screen and (min-width: 1400px) {
+  .App {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .App {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .App {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .timerContainer {
+    margin-top: 20px;
+  }  
 }

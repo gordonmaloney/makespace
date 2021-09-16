@@ -37,12 +37,13 @@ const Timer = ({ gender, difference }) => {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  }, [isActive, seconds, speakerCount]);
 
 
   const incrementSpeakerCount = () => {
+    difference(minutes, seconds, speakerCount + 1);
     setSpeakerCount(speakerCount + 1);
-    difference(minutes, seconds, speakerCount);
+
   };
 
   return (
@@ -59,7 +60,7 @@ const Timer = ({ gender, difference }) => {
           </div>
           <div>
             <Button
-              className={`button button-primary button-primary-${
+              className={`button buttonpurp button-primary button-primary-${
                 isActive ? "active" : "inactive"
               }`}
               variant="contained"
@@ -82,7 +83,7 @@ const Timer = ({ gender, difference }) => {
             {speakerCount !== 1 ? "have" : "has"} spoken.
             <br />
             <Button
-              className="button"
+              className="button buttonpurp"
               variant="contained"
               color="primary"
               size="small"

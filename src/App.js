@@ -2,7 +2,7 @@ import Timer from "./components/Timer";
 import Difference from "./components/Difference";
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
-import Chart from "./components/Chart";
+import logo from './images/logo.png'
 
 function App() {
   const [men, setMen] = useState({ minutes: 0, seconds: 0, count: 0 });
@@ -18,8 +18,10 @@ function App() {
   return (
       <div className="App">
 
-        <Grid container spacing={1}>
-          <Grid item xs={12} sm={6}>
+
+        <Grid container spacing={1}   justifyContent="space-around"
+>
+          <Grid item xs={12} sm={6} md={4}>
             <Timer
               gender="Women"
               difference={(minutes, seconds, count) =>
@@ -28,7 +30,7 @@ function App() {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} md={4}>
             <Timer
               gender="Men"
               difference={(minutes, seconds, count) =>
@@ -37,6 +39,7 @@ function App() {
             />
           </Grid>
         </Grid>
+
 
         <Difference women={women} men={men} />
       </div>

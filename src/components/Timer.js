@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@material-ui/core";
 
-const Timer = ({ gender, difference }) => {
+const Timer = ({ gender, difference, stopTimer, stopSame, stopOther }) => {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -11,7 +11,14 @@ const Timer = ({ gender, difference }) => {
 
   function toggle() {
     setIsActive(!isActive);
+    stopOther()
   }
+
+  useEffect(() => {
+    stopTimer == true && setIsActive(false)
+  }, [stopTimer])
+
+  isActive && stopSame() 
 
   function reset() {
     difference(0, 0, 0);

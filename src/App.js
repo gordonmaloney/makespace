@@ -15,6 +15,9 @@ function App() {
     setWomen({  minutes: minutes, seconds: seconds, count: count });
 
 
+  const [stopMenTimer, setStopMenTimer] = useState(false)
+  const [stopWomenTimer, setStopWomenTimer] = useState(false)
+
   return (
       <div className="App">
 
@@ -27,7 +30,11 @@ function App() {
               difference={(minutes, seconds, count) =>
                 setWomenProp(minutes, seconds, count)
               }
+              stopTimer={stopWomenTimer}
+              stopSame={() => setStopWomenTimer(false)}
+              stopOther={() => setStopMenTimer(true)}
             />
+          
           </Grid>
 
           <Grid item xs={12} sm={6} md={5}>
@@ -36,6 +43,9 @@ function App() {
               difference={(minutes, seconds, count) =>
                 setMenProp(minutes, seconds, count)
               }
+              stopTimer={stopMenTimer}
+              stopSame={() => setStopMenTimer(false)}
+              stopOther={() => setStopWomenTimer(true)}
             />
           </Grid>
         </Grid>

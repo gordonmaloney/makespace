@@ -55,7 +55,7 @@ code {
 
 @media screen and (min-width: 800px) {
   .App {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 
@@ -70,10 +70,9 @@ code {
 
 .logo {
   width: 50%;
-  min-width: 180px;
+  min-width: 160px;
   float: right;
   position: relative;
-  bottom: -45%
 }
 
 @media screen and (max-width: 600px) {

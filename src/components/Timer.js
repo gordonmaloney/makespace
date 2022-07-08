@@ -94,16 +94,18 @@ const Timer = ({ gender, difference, stopTimer, stopSame, stopOther }) => {
               variant="contained"
               color="primary"
               size="small"
+              style={{marginBottom: "-5px"}}
               onClick={incrementSpeakerCount}
             >
               + 1
             </Button>
             <br />
-            <br />
+            <br/>
             <Button
               className="button"
               variant="contained"
               size="small"
+              style={{transform: "scale(0.8)", marginBottom: "-5px" }}
               onClick={reset}
             >
               Reset

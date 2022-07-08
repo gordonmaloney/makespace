@@ -66,10 +66,11 @@ export default function Difference({ men, women, resetGender }) {
     );
   };
   return (
+    <>
     <Grid container spacing={1}>
       <Grid xs={12}>
         <center>
-          <h4>
+          <h4 style={{paddingTop: "10px", marginTop: "0px", marginBottom: "5px"}}>
             <Times />
             <br />
             and <Count />
@@ -84,9 +85,15 @@ export default function Difference({ men, women, resetGender }) {
           </center>
         </h4>
       </Grid>
-      <Grid item xs={12} sm={4}>
+
+</Grid>
+
+    <Grid container spacing={1} direction="row-reverse">
+
+      <Grid item xs={2} sm={4}>
         <img src={logo} alt="Logo" className="logo" />
       </Grid>
     </Grid>
+    </>
   );
 }

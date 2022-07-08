@@ -43,7 +43,7 @@ const Chart = ({ women, men }) => {
   womenTime === 0 && menTime === 0 && women.count === 0 && men.count === 0 ? heightVar = 0 : heightVar = "auto"
 
   return (
-    <div className="chart" style={{ width: "150px", height: "auto", marginBottom: "-10px", marginTop: "-30px" }}>
+    <div className="chart" style={{ width: "150px", height: "auto", marginBottom: "-20px", marginTop: "-10px" }}>
       <Pie
         options={options}
         data={data}
